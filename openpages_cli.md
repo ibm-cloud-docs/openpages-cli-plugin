@@ -185,30 +185,37 @@ Required permissions
 Prerequisites for ObjectManager operations
 
 `batch`
-:   Required files:
+:   Required files...
+
 `dump`
 :   Configure the **`objectmanager.properties`** file.
+
 `help`
 :   None.
-`load`
-:   Required files:
-`validate`
-:   Required files:
 
+`load`
+:   Required files...
+
+`validate`
+:   Required files...
 
 ### Command options
 {: #ibmcloud-openpages-objectmanager-options}
 
 `batch`
-:   The ...
+:   Required files...
+
 `dump`
-:   The ...
+:   Configure the **`objectmanager.properties`** file.
+
 `help`
-:   The ...
+:   None.
+
 `load`
-:   The ...
+:   Required files:
+
 `validate`
-:   The ...
+:   Required files:
 
 ### Examples
 {: #ibmcloud-openpages-objectmanager-examples}
