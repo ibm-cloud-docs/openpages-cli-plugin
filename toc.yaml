@@ -1,0 +1,13 @@
+toc:
+  properties:
+    subcollection: openpages-cli-plugin
+    audience: service
+    href: /docs/openpages-cli-plugin
+    path: openpages-cli-plugin
+    label: OpenPages CLI
+
+  entries:
+  - navgroup:
+      id: reference
+      topics:
+      - openpages_cli.md
