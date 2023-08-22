@@ -25,7 +25,7 @@ The {{site.data.keyword.openpages_short}} command-line interface (CLI) provides 
 * Install the {{site.data.keyword.openpages_short}} CLI by running the following command:
 
    ```sh
-   ibmcloud plugin install openpages-cli
+   ibmcloud plugin install openpages
    ```
    {: pre}
 
@@ -43,7 +43,7 @@ You're notified on the command line when updates to the {{site.data.keyword.clou
 On its own, the **`ibmcloud openpages help`** command displays the available top-level commands. When followed by another command, it displays specific help for that command.
 
 ```sh
-ibmcloud openpages help|h [command]
+ibmcloud (openpages|op) help|h [command]
 ```
 {: pre}
 
@@ -75,7 +75,7 @@ ibmcloud openpages help objectmanager
 Use this command to get a list of all {{site.data.keyword.openpages_short}} instances in your IBM Cloud account.
 
 ```sh
-ibmcloud openpages (list|ls)
+ibmcloud (openpages|op) (list|ls)
 ```
 {: pre}
 
@@ -143,7 +143,7 @@ The ObjectManager commands are:
 Use this command to load (import) multiple loader files.
 
 ```sh
-ibmcloud openpages objectmanager batch BATCH_LOADER_DIR BATCH_LOADER_LIST_FILE
+ibmcloud (openpages|op) (objectmanager|om) batch BATCH_LOADER_DIR BATCH_LOADER_LIST_FILE
 ```
 {: pre}
 
@@ -169,7 +169,7 @@ ibmcloud openpages objectmanager batch BATCH_LOADER_DIR BATCH_LOADER_LIST_FILE
 {: #ibmcloud-openpages-objectmanager-batch-example}
 
 ```sh
-ibmcloud openpages objectmanager batch /op/batch_files/ batch_file_list.txt
+ibmcloud openpages om batch /op/batch_files/ batch_file_list.txt
 ```
 {: screen}
 
@@ -196,7 +196,7 @@ Copied <file> to <directory>
 Use this command to dump (export) data.
 
 ```sh
-ibmcloud openpages objectmanager dump EXPORT_DIR FILE_PREFIX
+ibmcloud (openpages|op) (objectmanager|om) dump EXPORT_DIR FILE_PREFIX
 ```
 {: pre}
 
@@ -221,7 +221,7 @@ ibmcloud openpages objectmanager dump EXPORT_DIR FILE_PREFIX
 {: #ibmcloud-openpages-objectmanager-dump-example}
 
 ```sh
-ibmcloud openpages objectmanager dump /home/files object_types
+ibmcloud openpages om dump /home/files object_types
 ```
 {: screen}
 
@@ -238,7 +238,7 @@ The command creates the following file:
 Use this command to load (import) data.
 
 ```sh
-ibmcloud openpages objectmanager load LOADER_FILE_DIR FILE_PREFIX
+ibmcloud (openpages|op) (objectmanager|om) load LOADER_FILE_DIR FILE_PREFIX
 ```
 {: pre}
 
@@ -264,7 +264,7 @@ ibmcloud openpages objectmanager load LOADER_FILE_DIR FILE_PREFIX
 {: #ibmcloud-openpages-objectmanager-load-example}
 
 ```sh
-ibmcloud openpages objectmanager load /home/loader_files myfile
+ibmcloud openpages om load /home/loader_files myfile
 ```
 {: screen}
 
@@ -291,7 +291,7 @@ Copied <file> to <directory>
 Use this command to verify that a loader file is well-formed.
 
 ```sh
-ibmcloud openpages objectmanager validate LOADER_FILE_DIR FILE_PREFIX
+ibmcloud (openpages|op) (objectmanager|om) validate LOADER_FILE_DIR FILE_PREFIX
 ```
 {: pre}
 
@@ -316,7 +316,7 @@ ibmcloud openpages objectmanager validate LOADER_FILE_DIR FILE_PREFIX
 {: #ibmcloud-openpages-objectmanager-validate-example}
 
 ```sh
-ibmcloud openpages objectmanager validate /home/loader_files myfile
+ibmcloud openpages om validate /home/loader_files myfile
 ```
 {: screen}
 
@@ -342,7 +342,7 @@ Copied <file> to <directory>
 Use this command to select the {{site.data.keyword.openpages_short}} instance on which you want to run subsequent commands.
 
 ```sh
-ibmcloud openpages (select|s) [GUID]
+ibmcloud (openpages|op) (select|s) [GUID]
 ```
 
 ### Command options
@@ -380,7 +380,7 @@ No OpenPages application targeted.
 Use this command to deselect an {{site.data.keyword.openpages_short}} instance.
 
 ```sh
-ibmcloud openpages (unselect|u) [GUID]
+ibmcloud (openpages|op) (unselect|u) [GUID]
 ```
 
 ### Command options
