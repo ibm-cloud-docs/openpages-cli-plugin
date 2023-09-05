@@ -223,7 +223,7 @@ ibmcloud (openpages|op) (objectmanager|om) dump EXPORT_DIR FILE_PREFIX
 {: #ibmcloud_openpages_objectmanager-prereqs-dump}
 
 * Set a target instance by using the **`ibmcloud openpages select`** command.
-* Use the **`objectmanager.properties`** file to specify the data to export.
+* Use the **`objectmanager.properties`** file to specify the data to export. The file is located in the folder that you specified when you installed the CLI. See [Prerequisites]({: #openpages_CLI-prereq}).
 
    For more information, see [Modifying the ObjectManager properties file](https://www.ibm.com/docs/en/SSFUEU_9.0.0/op_grc_admin/t_adm_modifying_the_objectmanager_properties_file.html).
 
