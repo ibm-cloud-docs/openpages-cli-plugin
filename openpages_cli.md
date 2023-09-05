@@ -30,6 +30,17 @@ The {{site.data.keyword.openpages_short}} command-line interface (CLI) provides 
    {: pre}
 
 * Before you run **`ibmcloud openpages`** commands, log in to {{site.data.keyword.cloud_notm}} by using the **`ibmcloud login`** command.
+* Generate the **`objectmanager.properties`** file by running the following command.
+
+    * Replace `folder` with the path to a local folder.
+    * Replace `file-prefix` with any text, such as `test`.
+
+   ```sh
+   ibmcloud openpages om dump folder file-prefix
+   ```
+   {: screen}
+
+   You now have an **`objectmanager.properties`** file in the `folder` that you specified.
 
 You're notified on the command line when updates to the {{site.data.keyword.cloud_notm}} CLI and plug-ins are available. Be sure to keep your CLI up to date so that you can use the latest commands. You can view the current version of all installed plug-ins by running **`ibmcloud plugin list`**.
 {: tip}
@@ -136,7 +147,6 @@ The ObjectManager commands are:
 `validate`
 :   Check that a single loader file is well-formed.
 
-
 ### **`ibmcloud openpages objectmanager batch`**
 {: #ibmcloud-openpages-objectmanager-batch}
 
@@ -229,7 +239,7 @@ ibmcloud openpages om dump /home/files object_types
 {: ##ibmcloud-openpages-objectmanager-output-dump}
 
 The command creates the following file:
-**`/home/files/object_types-op-config.xml file`**
+**`/home/files/object_types-op-config.xml`**
 
 
 ### **`ibmcloud openpages objectmanager load`**
