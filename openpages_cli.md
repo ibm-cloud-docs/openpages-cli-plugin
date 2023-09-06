@@ -30,7 +30,7 @@ The {{site.data.keyword.openpages_short}} command-line interface (CLI) provides 
    {: pre}
 
 * Before you run **`ibmcloud openpages`** commands, log in to {{site.data.keyword.cloud_notm}} by using the **`ibmcloud login`** command.
-* Generate the template files for **`ibmcloud openpages`**. See [`ibmcloud openpages create-templates`]({: #ibmcloud_openpages_create-template})
+* Generate the template files for **`ibmcloud openpages`**. See [**`ibmcloud openpages create templates`**](#ibmcloud_openpages_create-template)
 
    Copy the files to the directory where **`ibmcloud openpages`** is installed.
 
@@ -39,38 +39,6 @@ You're notified on the command line when updates to the {{site.data.keyword.clou
 
 {{site.data.keyword.cloud_notm}} CLI requires Java&trade; 1.8.0.
 {: note}
-
-## `ibmcloud openpages create-templates`
-{: #ibmcloud_openpages_create-template}
-
-Generates the following files:
--  **`objectmanager.properties`**
--  **`ObjectManagerExportFilters-Example.xml`**
-
-Copy the generated files to the directory where **`ibmcloud openpages`** is installed.
-
-You need to run the `ibmcloud openpages create-templates` command at least one time.
-
-```sh
-ibmcloud openpages om (create-templates|c) DIRECTORY
-```
-{: pre}
-
-### Command options
-{: #ibmcloud-openpages-create-templates-options}
-
-`DIRECTORY` (string)
-:   The full path of a local directory. The template files are created in this directory.
-
-### Examples
-{: #ibmcloud-openpages-create-templates-examples}
-
-Create the templates and store them in the `\home\tmp\objectmanager` directory.
-
-```sh
-ibmcloud openpages c \home\tmp\objectmanager
-```
-{: screen}
 
 ## `ibmcloud openpages help`
 {: #ibmcloud_openpages_help}
@@ -226,6 +194,37 @@ Copied <file> to <directory>
 ```
 {: screen}
 
+### `ibmcloud openpages create-templates`
+{: #ibmcloud_openpages_create-templates}
+
+Generates the following files:
+-  **`objectmanager.properties`**
+-  **`ObjectManagerExportFilters-Example.xml`**
+
+Copy the generated files to the directory where **`ibmcloud openpages`** is installed.
+
+You need to run the `ibmcloud openpages create-templates` command at least one time.
+
+```sh
+ibmcloud openpages om (create-templates|c) DIRECTORY
+```
+{: pre}
+
+#### Command options
+{: #ibmcloud-openpages-create-templates-options}
+
+`DIRECTORY` (string)
+:   The full path of a local directory. The template files are created in this directory.
+
+#### Examples
+{: #ibmcloud-openpages-create-templates-examples}
+
+Create the templates and store them in the `\home\tmp\objectmanager` directory.
+
+```sh
+ibmcloud openpages c \home\tmp\objectmanager
+```
+{: screen}
 
 ### **`ibmcloud openpages objectmanager dump`**
 {: #ibmcloud-openpages-objectmanager-dump}
@@ -241,7 +240,9 @@ ibmcloud (openpages|op) (objectmanager|om) dump EXPORT_DIR FILE_PREFIX
 {: #ibmcloud-openpages-dump-options}
 
 `EXPORT_DIR`
-:   The full path to the directory where the BATCH_LOADER_LIST_FILE file and the loader files are stored.
+:   The full path to the directory where the BATCH_LOADER_LIST_FILE file and the loader files are stored. The following files must also be in this directory:
+-  **`objectmanager.properties`**
+-  **`ObjectManagerExportFilters-Example.xml`**
 
 `FILE_PREFIX`
 :   The prefix to append to the output file.
