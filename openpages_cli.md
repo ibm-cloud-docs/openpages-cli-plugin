@@ -30,23 +30,47 @@ The {{site.data.keyword.openpages_short}} command-line interface (CLI) provides 
    {: pre}
 
 * Before you run **`ibmcloud openpages`** commands, log in to {{site.data.keyword.cloud_notm}} by using the **`ibmcloud login`** command.
-* Generate the **`objectmanager.properties`** file by running the following command.
+* Generate the template files for **`ibmcloud openpages`**. See [`ibmcloud openpages create-templates`]({: #ibmcloud_openpages_create-template})
 
-    * Replace `folder` with the path to a local folder.
-    * Replace `file-prefix` with any text, such as `test`.
-
-   ```sh
-   ibmcloud openpages om dump folder file-prefix
-   ```
-   {: screen}
-
-   You now have an **`objectmanager.properties`** file in the `folder` that you specified.
+   Copy the files to the directory where **`ibmcloud openpages`** is installed.
 
 You're notified on the command line when updates to the {{site.data.keyword.cloud_notm}} CLI and plug-ins are available. Be sure to keep your CLI up to date so that you can use the latest commands. You can view the current version of all installed plug-ins by running **`ibmcloud plugin list`**.
 {: tip}
 
 {{site.data.keyword.cloud_notm}} CLI requires Java&trade; 1.8.0.
 {: note}
+
+## `ibmcloud openpages create-templates`
+{: #ibmcloud_openpages_create-template}
+
+Generates the following files:
+-  **`objectmanager.properties`**
+-  **`ObjectManagerExportFilters-Example.xml`**
+
+You need these files to run other `ibmcloud openpages` commands. Copy the generated files to the directory where **`ibmcloud openpages`** is installed.
+
+You need to run the `ibmcloud openpages create-templates` only once.
+
+```sh
+ibmcloud openpages om (create-templates|c) DIRECTORY
+```
+{: pre}
+
+### Command options
+{: #ibmcloud-openpages-help-options}
+
+`DIRECTORY` (string)
+:   The full path of a local directory. The template files are created in this directory.
+
+### Examples
+{: #ibmcloud-openpages-help-examples}
+
+Create the templates and store them in the `\opt\tmp\objectmanager` directory.
+
+```sh
+ibmcloud openpages c \opt\openpages\objectmanager
+```
+{: screen}
 
 ## `ibmcloud openpages help`
 {: #ibmcloud_openpages_help}
