@@ -49,7 +49,7 @@ Generates the following files:
 
 Copy the generated files to the directory where **`ibmcloud openpages`** is installed.
 
-You need to run the `ibmcloud openpages create-templates` command one time only.
+You need to run the `ibmcloud openpages create-templates` command at least one time.
 
 ```sh
 ibmcloud openpages om (create-templates|c) DIRECTORY
