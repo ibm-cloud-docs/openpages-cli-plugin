@@ -43,7 +43,7 @@ You're notified on the command line when updates to the {{site.data.keyword.clou
 On its own, the **`ibmcloud openpages help`** command displays the available top-level commands. When followed by another command, it displays specific help for that command.
 
 ```sh
-ibmcloud (openpages|op) help|h [command]
+ibmcloud (openpages|op) (help|h) [command]
 ```
 {: pre}
 
@@ -191,7 +191,7 @@ Copied <file> to <directory>
 ```
 {: screen}
 
-### `ibmcloud openpages objectmanager create-templates`
+### **`ibmcloud openpages objectmanager create-templates`**
 {: #ibmcloud_openpages_create-templates}
 
 Generates the following files:
@@ -201,7 +201,7 @@ Generates the following files:
 You need to run the `ibmcloud openpages objectmanager create-templates` command at least one time.
 
 ```sh
-ibmcloud openpages om (create-templates|c) DIRECTORY
+ibmcloud openpages (objectmanager|om) (create-templates|c) DIRECTORY
 ```
 {: pre}
 
@@ -295,6 +295,8 @@ ibmcloud (openpages|op) (objectmanager|om) load LOADER_FILE_DIR FILE_PREFIX
 
 #### Example: Importing data
 {: #ibmcloud-openpages-objectmanager-load-example}
+
+Load the `/home/loader_files/myfile-op-config.xml` file.
 
 ```sh
 ibmcloud openpages om load /home/loader_files myfile
