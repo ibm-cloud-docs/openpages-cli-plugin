@@ -30,9 +30,6 @@ The {{site.data.keyword.openpages_short}} command-line interface (CLI) provides 
    {: pre}
 
 * Before you run **`ibmcloud openpages`** commands, log in to {{site.data.keyword.cloud_notm}} by using the **`ibmcloud login`** command.
-* Generate the template files for **`ibmcloud openpages`**. See [**`ibmcloud openpages objectmanager create templates`**](#ibmcloud_openpages_create-template)
-
-   Copy the files to the directory where **`ibmcloud openpages`** is installed.
 
 You're notified on the command line when updates to the {{site.data.keyword.cloud_notm}} CLI and plug-ins are available. Be sure to keep your CLI up to date so that you can use the latest commands. You can view the current version of all installed plug-ins by running **`ibmcloud plugin list`**.
 {: tip}
@@ -220,7 +217,7 @@ ibmcloud openpages om (create-templates|c) DIRECTORY
 Create the templates and store them in the `/home/tmp/objectmanager` directory.
 
 ```sh
-ibmcloud openpages c /home/tmp/objectmanager
+ibmcloud openpages om c /home/tmp/objectmanager
 ```
 {: screen}
 
@@ -238,9 +235,7 @@ ibmcloud (openpages|op) (objectmanager|om) dump EXPORT_DIR FILE_PREFIX
 {: #ibmcloud-openpages-dump-options}
 
 `EXPORT_DIR`
-:   The full path to the directory where you want the exported file to be saved. The following files must also be in this directory:
--  **`ObjectManager.properties`**
--  **`ObjectManagerExportFilters-Example.xml`**
+:   The full path to the directory where you want the exported file to be saved. The `ObjectManager.properties` file must also be in this directory. If you want to use export filters, the `ObjectManagerExportFilters.xml` file must also be in this directory.
 
 `FILE_PREFIX`
 :   The prefix to append to the output file.
@@ -248,10 +243,12 @@ ibmcloud (openpages|op) (objectmanager|om) dump EXPORT_DIR FILE_PREFIX
 #### Prerequisites
 {: #ibmcloud_openpages_objectmanager-prereqs-dump}
 
-* Set a target instance by using the **`ibmcloud openpages select`** command.
+* Generate the template files for **`ibmcloud openpages objectmanager`**. See [**`ibmcloud openpages objectmanager create templates`**](#ibmcloud_openpages_create-templates)
+* Copy the `ObjectManager.properties` file to the `EXPORT_DIR`.
+* If you're using export filters, copy the `ObjectManagerExportFilters.xml` file to the `EXPORT_DIR`.
 * Use the **`ObjectManager.properties`** file to specify the data to export.
-
    For more information, see [Modifying the ObjectManager properties file](https://www.ibm.com/docs/en/SSFUEU_9.0.0/op_grc_admin/t_adm_modifying_the_objectmanager_properties_file.html).
+* Set a target instance by using the **`ibmcloud openpages select`** command.
 
 #### Example: Exporting data
 {: #ibmcloud-openpages-objectmanager-dump-example}
