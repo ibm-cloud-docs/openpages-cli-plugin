@@ -129,7 +129,7 @@ The ObjectManager commands are:
 :   Load (import) multiple loader XML files.
 
 `create-templates`
-:   Generate the **`objectmanager.properties`** and **`ObjectManagerExportFilters-Example.xml`** files.
+:   Generate the **`ObjectManager.properties`** and **`ObjectManagerExportFilters-Example.xml`** files.
 
 `dump`
 :   Dump (export) to XML.
@@ -194,16 +194,14 @@ Copied <file> to <directory>
 ```
 {: screen}
 
-### `ibmcloud openpages create-templates`
+### `ibmcloud openpages objectmanager create-templates`
 {: #ibmcloud_openpages_create-templates}
 
 Generates the following files:
--  **`objectmanager.properties`**
+-  **`ObjectManager.properties`**
 -  **`ObjectManagerExportFilters-Example.xml`**
 
-Copy the generated files to the directory where **`ibmcloud openpages`** is installed.
-
-You need to run the `ibmcloud openpages create-templates` command at least one time.
+You need to run the `ibmcloud openpages objectmanager create-templates` command at least one time.
 
 ```sh
 ibmcloud openpages om (create-templates|c) DIRECTORY
@@ -219,10 +217,10 @@ ibmcloud openpages om (create-templates|c) DIRECTORY
 #### Examples
 {: #ibmcloud-openpages-create-templates-examples}
 
-Create the templates and store them in the `\home\tmp\objectmanager` directory.
+Create the templates and store them in the `/home/tmp/objectmanager` directory.
 
 ```sh
-ibmcloud openpages c \home\tmp\objectmanager
+ibmcloud openpages c /home/tmp/objectmanager
 ```
 {: screen}
 
@@ -241,7 +239,7 @@ ibmcloud (openpages|op) (objectmanager|om) dump EXPORT_DIR FILE_PREFIX
 
 `EXPORT_DIR`
 :   The full path to the directory where the BATCH_LOADER_LIST_FILE file and the loader files are stored. The following files must also be in this directory:
--  **`objectmanager.properties`**
+-  **`ObjectManager.properties`**
 -  **`ObjectManagerExportFilters-Example.xml`**
 
 `FILE_PREFIX`
@@ -251,7 +249,7 @@ ibmcloud (openpages|op) (objectmanager|om) dump EXPORT_DIR FILE_PREFIX
 {: #ibmcloud_openpages_objectmanager-prereqs-dump}
 
 * Set a target instance by using the **`ibmcloud openpages select`** command.
-* Use the **`objectmanager.properties`** file to specify the data to export.
+* Use the **`ObjectManager.properties`** file to specify the data to export.
 
    For more information, see [Modifying the ObjectManager properties file](https://www.ibm.com/docs/en/SSFUEU_9.0.0/op_grc_admin/t_adm_modifying_the_objectmanager_properties_file.html).
 
@@ -312,7 +310,7 @@ ibmcloud openpages om load /home/loader_files myfile
 The command returns the following output:
 
 ```text
-?
+...
 Total Objects processed
 Total Validation Errors
 Total Exceptions
@@ -364,7 +362,7 @@ ibmcloud openpages om validate /home/loader_files myfile
 The command returns the following output:
 
 ```text
-?
+...
 Total Objects processed
 Total Validation Errors
 Total Exceptions
@@ -437,6 +435,7 @@ ibmcloud openpages unselect <instance_GUID>
 ```
 {: pre}
 
+<!--
 ### Output
 {: ##ibmcloud-openpages-unselect-output}
 
@@ -445,4 +444,4 @@ The command returns the following output:
 ```text
 ?
 ```
-{: screen}
+{: screen}-->
