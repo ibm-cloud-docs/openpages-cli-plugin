@@ -238,7 +238,7 @@ ibmcloud (openpages|op) (objectmanager|om) dump EXPORT_DIR FILE_PREFIX
 {: #ibmcloud-openpages-dump-options}
 
 `EXPORT_DIR`
-:   The full path to the directory where the BATCH_LOADER_LIST_FILE file and the loader files are stored. The following files must also be in this directory:
+:   The full path to the directory where you want the exported file to be saved. The following files must also be in this directory:
 -  **`ObjectManager.properties`**
 -  **`ObjectManagerExportFilters-Example.xml`**
 
@@ -434,14 +434,3 @@ Get a numbered list of instances that are currently selected.
 ibmcloud openpages unselect <instance_GUID>
 ```
 {: pre}
-
-<!--
-### Output
-{: ##ibmcloud-openpages-unselect-output}
-
-The command returns the following output:
-
-```text
-?
-```
-{: screen}-->
