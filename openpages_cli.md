@@ -30,7 +30,7 @@ The {{site.data.keyword.openpages_short}} command-line interface (CLI) provides 
    {: pre}
 
 * Before you run **`ibmcloud openpages`** commands, log in to {{site.data.keyword.cloud_notm}} by using the **`ibmcloud login`** command.
-* Generate the template files for **`ibmcloud openpages`**. See [**`ibmcloud openpages create templates`**](#ibmcloud_openpages_create-template)
+* Generate the template files for **`ibmcloud openpages`**. See [**`ibmcloud openpages objectmanager create templates`**](#ibmcloud_openpages_create-template)
 
    Copy the files to the directory where **`ibmcloud openpages`** is installed.
 
