@@ -355,22 +355,6 @@ ibmcloud openpages om validate /home/loader_files myfile
 ```
 {: screen}
 
-##### Output
-{: ##ibmcloud-openpages-objectmanager-output-validate}
-
-The command returns the following output:
-
-```text
-...
-Total Objects processed
-Total Validation Errors
-Total Exceptions
-Processing finished
-Elapsed time
-Copied <file> to <directory>
-```
-{: screen}
-
 ## `ibmcloud openpages select`
 {: #ibmcloud_openpages_select}
 
