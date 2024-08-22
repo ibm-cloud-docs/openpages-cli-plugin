@@ -73,7 +73,7 @@ ibmcloud openpages help objectmanager
 ## `ibmcloud openpages list`
 {: #ibmcloud_openpages_list}
 
-Use this command to get a list of all {{site.data.keyword.openpages_short}} instances in your IBM Cloud account.
+Use this command to get a list of all {{site.data.keyword.openpages_short}} instances in your {{site.data.keyword.cloud_notm}} account.
 
 ```sh
 ibmcloud (openpages|op) (list|ls)
