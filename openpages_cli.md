@@ -1,10 +1,9 @@
 ---
-
 copyright:
-  years: 2015, 2023
-lastupdated: "2023-07-31"
+  years: 2024
+lastupdated: "2024-08-22"
 
-subcollection: openpages
+subcollection: openpages-cli-plugin
 
 keywords: _OpenPages_ CLI, _OpenPages_ command line , _OpenPages CLI_ terminal, _OpenPages CLI_ shell, _ObjectManager_
 
