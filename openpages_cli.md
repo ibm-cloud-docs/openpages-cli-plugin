@@ -1,7 +1,7 @@
 ---
 copyright:
   years: 2024
-lastupdated: "2024-08-22"
+lastupdated: "2024-10-17"
 
 subcollection: openpages-cli-plugin
 
@@ -150,6 +150,8 @@ ibmcloud (openpages|op) (objectmanager|om) batch BATCH_LOADER_DIR BATCH_LOADER_L
 ```
 {: pre}
 
+Review the following documentation: [Batch loader file syntax](https://www.ibm.com/docs/SSFUEU_latest/op_grc_admin/c_adm_running_objectmanager_commands.html#wp1042636__title__1)
+
 #### Command options
 {: #ibmcloud-openpages-batch-options}
 
@@ -231,6 +233,11 @@ ibmcloud (openpages|op) (objectmanager|om) dump EXPORT_DIR FILE_PREFIX
 ```
 {: pre}
 
+Review the following documentation:
+- [Settings in the ObjectManager properties file](https://www.ibm.com/docs/SSFUEU_latest/op_grc_admin/t_adm_modifying_the_objectmanager_properties_file.html)
+- [Filtering data for export](https://www.ibm.com/docs/SSFUEU_latest/op_grc_admin/c_adm_filtering_data_for_export.html)
+- [Examples](https://www.ibm.com/docs/SSFUEU_latest/op_grc_admin/c_objmanagertool_examples.html)
+
 #### Command options
 {: #ibmcloud-openpages-dump-options}
 
@@ -246,8 +253,9 @@ ibmcloud (openpages|op) (objectmanager|om) dump EXPORT_DIR FILE_PREFIX
 * Generate the template files for **`ibmcloud openpages objectmanager`**. See [**`ibmcloud openpages objectmanager create templates`**](#ibmcloud_openpages_create-templates)
 * Copy the `ObjectManager.properties` file to the `EXPORT_DIR`.
 * If you're using export filters, copy the `ObjectManagerExportFilters.xml` file to the `EXPORT_DIR`.
+   For more information, see - [Filtering data for export](https://www.ibm.com/docs/SSFUEU_latest/op_grc_admin/c_adm_filtering_data_for_export.html).
 * Use the **`ObjectManager.properties`** file to specify the data to export.
-   For more information, see [Modifying the ObjectManager properties file](https://www.ibm.com/docs/SSFUEU_9.0.0/op_grc_admin/t_adm_modifying_the_objectmanager_properties_file.html).
+   For more information, see [Settings in the ObjectManager properties file](https://www.ibm.com/docs/SSFUEU_latest/op_grc_admin/t_adm_modifying_the_objectmanager_properties_file.html).
 * Set a target instance by using the **`ibmcloud openpages select`** command.
 
 #### Example: Exporting data
@@ -275,6 +283,10 @@ ibmcloud (openpages|op) (objectmanager|om) load LOADER_FILE_DIR FILE_PREFIX
 ```
 {: pre}
 
+Review the following documentation:
+- [Working with loader files](https://www.ibm.com/docs/SSFUEU_latest/op_grc_admin/c_adm_working_with_loader_files.html)
+- [Examples](https://www.ibm.com/docs/SSFUEU_latest/op_grc_admin/c_objmanagertool_examples.html)
+
 #### Command options
 {: #ibmcloud-openpages-load-options}
 
@@ -290,7 +302,6 @@ ibmcloud (openpages|op) (objectmanager|om) load LOADER_FILE_DIR FILE_PREFIX
 
 * Set a target instance by using the **`ibmcloud openpages select`** command.
 * Prepare a loader file. The file name must use the pattern `*-op-config.xml`.
-
    For more information, see [Working with loader files](https://www.ibm.com/docs/SSFUEU_9.0.0/op_grc_admin/c_adm_working_with_loader_files.html).
 
 #### Example: Importing data
