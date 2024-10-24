@@ -5,6 +5,7 @@ toc:
     href: /docs/openpages-cli-plugin
     path: openpages-cli-plugin
     label: OpenPages CLI
+    navigation: hidden
   entries:
   - navgroup:
       id: reference
