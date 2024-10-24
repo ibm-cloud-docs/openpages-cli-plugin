@@ -1,7 +1,7 @@
 ---
 copyright:
   years: 2024
-lastupdated: "2024-10-17"
+lastupdated: "2024-10-24"
 
 subcollection: openpages-cli-plugin
 
@@ -150,8 +150,6 @@ ibmcloud (openpages|op) (objectmanager|om) batch BATCH_LOADER_DIR BATCH_LOADER_L
 ```
 {: pre}
 
-Review the following documentation: [Batch loader file syntax](https://www.ibm.com/docs/SSFUEU_latest/op_grc_admin/c_adm_running_objectmanager_commands.html#wp1042636__title__1)
-
 #### Command options
 {: #ibmcloud-openpages-batch-options}
 
@@ -164,11 +162,8 @@ Review the following documentation: [Batch loader file syntax](https://www.ibm.c
 #### Prerequisites
 {: #ibmcloud_openpages_objectmanager-prereqs-batch}
 
+* Create a batch loader list file that lists one or more XML loader files. For more information, see [Batch loader file syntax](https://www.ibm.com/docs/SSFUEU_latest/op_grc_admin/c_adm_running_objectmanager_commands.html#wp1042636__title__1)
 * Set a target instance by using the **`ibmcloud openpages select`** command.
-
-* Create a batch loader list file that lists one or more XML loader files.
-
-   For more information, see [Batch loader file syntax and sample](https://www.ibm.com/docs/SSFUEU_9.0.0/op_grc_admin/t_adm_objectmanager_sample_batch_loader_list_file.html).
 
 #### Example: Batch mode
 {: #ibmcloud-openpages-objectmanager-batch-example}
@@ -234,7 +229,7 @@ ibmcloud (openpages|op) (objectmanager|om) dump EXPORT_DIR FILE_PREFIX
 {: pre}
 
 Review the following documentation:
-- [Settings in the ObjectManager properties file](https://www.ibm.com/docs/SSFUEU_latest/op_grc_admin/t_adm_modifying_the_objectmanager_properties_file.html)
+- [Modifying the ObjectManager properties file](https://www.ibm.com/docs/SSFUEU_latest/op_grc_admin/t_adm_modifying_the_objectmanager_properties_file.html)
 - [Filtering data for export](https://www.ibm.com/docs/SSFUEU_latest/op_grc_admin/c_adm_filtering_data_for_export.html)
 - [Examples](https://www.ibm.com/docs/SSFUEU_latest/op_grc_admin/c_objmanagertool_examples.html)
 
@@ -255,7 +250,7 @@ Review the following documentation:
 * If you're using export filters, copy the `ObjectManagerExportFilters.xml` file to the `EXPORT_DIR`.
    For more information, see - [Filtering data for export](https://www.ibm.com/docs/SSFUEU_latest/op_grc_admin/c_adm_filtering_data_for_export.html).
 * Use the **`ObjectManager.properties`** file to specify the data to export.
-   For more information, see [Settings in the ObjectManager properties file](https://www.ibm.com/docs/SSFUEU_latest/op_grc_admin/t_adm_modifying_the_objectmanager_properties_file.html).
+   For more information, see [Modifying the ObjectManager properties file](https://www.ibm.com/docs/SSFUEU_latest/op_grc_admin/t_adm_modifying_the_objectmanager_properties_file.html).
 * Set a target instance by using the **`ibmcloud openpages select`** command.
 
 #### Example: Exporting data
